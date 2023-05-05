@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible", content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfoliio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/feebfc1c45.js" crossorigin="anonymous"></script>
+</head>
+<body>  
+<!-- ------------header------------- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/KT.png", class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>  
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Data Sciecne Undergrad</p>
+                <h1>Hi, I'm <span>Kojiro Tsugaru</span><br>from Japan.</h1>
+            </div>
+    </div>
+<!-- -----------about-------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/profile1.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>       
+                <p>I'm a data science undergrad with a 
+                    passion for using data to drive insights and decisions. Skilled 
+                    in Swift, C++, and Python, I enjoy making apps that encourages data uses
+                    by people. I've worked on several iOS apps, web design, and data visualization 
+                    projects. Always eager to learn, I'm ready to contribute to impactful data-driven projects.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>App Development</span><br>Building iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Computer Science Tutor at Diablo Valley College.</li>
+                        <li><span>2020 - 2021</span><br>Freelance Videographer and Designer.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - Current</span><br>Uiversity of California Berkeley</li>
+                        <li><span>2023</span><br>Diablo Valley College</li>
+                        <li><span>2020</span><br>Takada High School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------------works------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Integrate web services using HTML, CSS, and Javascript.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>Integrate web services using HTML, CSS, and Javascript.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>Application</h2>
+                <p>Integrate web services using HTML, CSS, and Javascript.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio---------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Works</h1>
+        <div class="works-list">
+            <div class="work">
+                <img src="images/work2.jpeg">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>The app to connect the world with people in the same interest.
+                        Download it from Appstore.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.jpeg">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>The app to connect the world with people in the same interest.
+                        Download it from Appstore.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.jpeg">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>The app to connect the world with people in the same interest.
+                        Download it from Appstore.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
